@@ -659,3 +659,4 @@ $ git log --all --decorate --oneline --graph
 * 25c34f8 First commit for index
 
 cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git push
