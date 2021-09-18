@@ -1,0 +1,661 @@
+cmahadev@LIN20003871 MINGW64 ~
+$ git --help
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone             Clone a repository into a new directory
+   init              Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add               Add file contents to the index
+   mv                Move or rename a file, a directory, or a symlink
+   restore           Restore working tree files
+   rm                Remove files from the working tree and from the index
+   sparse-checkout   Initialize and modify the sparse-checkout
+
+examine the history and state (see also: git help revisions)
+   bisect            Use binary search to find the commit that introduced a bug
+   diff              Show changes between commits, commit and working tree, etc
+   grep              Print lines matching a pattern
+   log               Show commit logs
+   show              Show various types of objects
+   status            Show the working tree status
+
+grow, mark and tweak your common history
+   branch            List, create, or delete branches
+   commit            Record changes to the repository
+   merge             Join two or more development histories together
+   rebase            Reapply commits on top of another base tip
+   reset             Reset current HEAD to the specified state
+   switch            Switch branches
+   tag               Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch             Download objects and refs from another repository
+   pull              Fetch from and integrate with another repository or a local branch
+   push              Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+
+cmahadev@LIN20003871 MINGW64 ~
+$ pwd
+/c/Users/CMAHADEV
+
+cmahadev@LIN20003871 MINGW64 ~
+$ mkdir project_dir
+mkdir: cannot create directory ‘project_dir’: File exists
+
+cmahadev@LIN20003871 MINGW64 ~
+$ git init project_dir
+Reinitialized existing Git repository in C:/Users/CMAHADEV/project_dir/.git/
+
+cmahadev@LIN20003871 MINGW64 ~
+$ git add index.html
+fatal: not a git repository (or any of the parent directories): .git
+
+cmahadev@LIN20003871 MINGW64 ~
+$ pwd
+/c/Users/CMAHADEV
+
+cmahadev@LIN20003871 MINGW64 ~
+$ ls
+'3D Objects'/
+ AppData/
+'Application Data'@
+ Contacts/
+ Cookies@
+ Desktop/
+ Documents/
+ Downloads/
+ Favorites/
+ GitDemo/
+ IntelGraphicsProfiles/
+ Links/
+'Local Settings'@
+ MicrosoftEdgeBackups/
+ Music/
+'My Documents'@
+ NTUSER.DAT
+ NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TM.blf
+ NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000002.regtrans-ms
+ NetHood@
+'OneDrive - Capgemini'/
+ Pictures/
+ PrintHood@
+ Project_dirr/
+ Recent@
+'Saved Games'/
+ Searches/
+ SendTo@
+'Start Menu'@
+ Templates@
+ Videos/
+ ntuser.dat.LOG1
+ ntuser.dat.LOG2
+ ntuser.ini
+ project/
+ project_dir/
+
+cmahadev@LIN20003871 MINGW64 ~
+$ cd project_dir
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir (master)
+$ ls
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir (master)
+$ git add index.html
+fatal: pathspec 'index.html' did not match any files
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir (master)
+$ git init project_dir
+Initialized empty Git repository in C:/Users/CMAHADEV/project_dir/project_dir/.git/
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir (master)
+$ ls
+project_dir/
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir (master)
+$ cd project_dir
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git add index.html
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git commit -m 'First commit for index'
+[master (root-commit) 25c34f8] First commit for index
+ Committer: Chavan <chavan-vidya.mahadev@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ vim index.html
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ touch info.txt
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        info.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git .gitignore
+git: '.gitignore' is not a git command. See 'git --help'.
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ touch .gitignore
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git add .
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+        modified:   index.html
+
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ touch info2.txt
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+        modified:   index.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        info.txt
+        info2.txt
+
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+        modified:   index.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        info.txt
+        info2.txt
+
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+        modified:   index.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git add .
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+        modified:   index.html
+
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git log
+commit 25c34f8c26a433399e01d91bd6c5e8810b6fe236 (HEAD -> master)
+Author: Chavan <chavan-vidya.mahadev@capgemini.com>
+Date:   Sat Sep 18 23:47:38 2021 +0530
+
+    First commit for index
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ vim index.html
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git --help revert
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git revert
+usage: git revert [<options>] <commit-ish>...
+   or: git revert <subcommand>
+
+    --quit                end revert or cherry-pick sequence
+    --continue            resume revert or cherry-pick sequence
+    --abort               cancel revert or cherry-pick sequence
+    --skip                skip current commit and continue
+    --cleanup <mode>      how to strip spaces and #comments from message
+    -n, --no-commit       don't automatically commit
+    -e, --edit            edit the commit message
+    -s, --signoff         add a Signed-off-by trailer
+    -m, --mainline <parent-number>
+                          select mainline parent
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
+    --strategy <strategy>
+                          merge strategy
+    -X, --strategy-option <option>
+                          option for merge strategy
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+        modified:   index.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git log --all --decorate --oneline --graph
+* 25c34f8 (HEAD -> master) First commit for index
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+        modified:   index.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git commit -m 'Second commit'
+[master 59ac0fc] Second commit
+ Committer: Chavan <chavan-vidya.mahadev@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 4 insertions(+)
+ create mode 100644 .gitignore
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git add index.html
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git commit -m 'Second commit'
+[master e0f0d84] Second commit
+ Committer: Chavan <chavan-vidya.mahadev@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git log --all --decorate --oneline --graph
+* e0f0d84 (HEAD -> master) Second commit
+* 59ac0fc Second commit
+* 25c34f8 First commit for index
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git revert HEAD~2
+CONFLICT (modify/delete): index.html deleted in (empty tree) and modified in HEAD. Version HEAD of index.html left in tree.
+error: could not revert 25c34f8... First commit for index
+hint: after resolving the conflicts, mark the corrected paths
+hint: with 'git add <paths>' or 'git rm <paths>'
+hint: and commit the result with 'git commit'
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master|REVERTING)
+$ git revert HEAD~1
+error: Reverting is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: revert failed
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master|REVERTING)
+$ git reset HEAD~1
+Unstaged changes after reset:
+M       index.html
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git add .
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git commit -m 'commit everything to revert'
+[master 9d24ef2] commit everything to revert
+ Committer: Chavan <chavan-vidya.mahadev@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git log --all --decorate --oneline --graph
+* 9d24ef2 (HEAD -> master) commit everything to revert
+* 59ac0fc Second commit
+* 25c34f8 First commit for index
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git log
+commit 9d24ef2a482dc4f3bb50591a79334876c768e79d (HEAD -> master)
+Author: Chavan <chavan-vidya.mahadev@capgemini.com>
+Date:   Sun Sep 19 00:39:32 2021 +0530
+
+    commit everything to revert
+
+commit 59ac0fc2eb4415a32f2a53a45f33dbdf57d645c3
+Author: Chavan <chavan-vidya.mahadev@capgemini.com>
+Date:   Sun Sep 19 00:22:06 2021 +0530
+
+    Second commit
+
+commit 25c34f8c26a433399e01d91bd6c5e8810b6fe236
+Author: Chavan <chavan-vidya.mahadev@capgemini.com>
+Date:   Sat Sep 18 23:47:38 2021 +0530
+
+    First commit for index
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git revert^C
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git revert 9d24ef2a482dc4f3bb50591a79334876c768e79d
+[master 75fbfde] Undo_commit "commit everything to revert"
+ Committer: Chavan <chavan-vidya.mahadev@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 deletion(-)
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git log
+commit 75fbfdeb1616494a0522f2e2ffdca49414ee8c11 (HEAD -> master)
+Author: Chavan <chavan-vidya.mahadev@capgemini.com>
+Date:   Sun Sep 19 00:42:13 2021 +0530
+
+    Undo_commit "commit everything to revert"
+
+    This reverts commit 9d24ef2a482dc4f3bb50591a79334876c768e79d.
+
+commit 9d24ef2a482dc4f3bb50591a79334876c768e79d
+Author: Chavan <chavan-vidya.mahadev@capgemini.com>
+Date:   Sun Sep 19 00:39:32 2021 +0530
+
+    commit everything to revert
+
+commit 59ac0fc2eb4415a32f2a53a45f33dbdf57d645c3
+Author: Chavan <chavan-vidya.mahadev@capgemini.com>
+Date:   Sun Sep 19 00:22:06 2021 +0530
+
+    Second commit
+
+commit 25c34f8c26a433399e01d91bd6c5e8810b6fe236
+Author: Chavan <chavan-vidya.mahadev@capgemini.com>
+Date:   Sat Sep 18 23:47:38 2021 +0530
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git log --all --decorate --oneline --graph
+* 75fbfde (HEAD -> master) Undo_commit "commit everything to revert"
+* 9d24ef2 commit everything to revert
+* 59ac0fc Second commit
+* 25c34f8 First commit for index
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git config --global alias.my-add add
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git my-add index.html
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ vim index.html
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git my-add index.html
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git commit -m 'done configuring command'
+[master cfa511b] done configuring command
+ Committer: Chavan <chavan-vidya.mahadev@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git log
+commit cfa511b413bbd44ea68751339f23b29c8b99c2f0 (HEAD -> master)
+Author: Chavan <chavan-vidya.mahadev@capgemini.com>
+Date:   Sun Sep 19 00:52:28 2021 +0530
+
+    done configuring command
+
+commit 75fbfdeb1616494a0522f2e2ffdca49414ee8c11
+Author: Chavan <chavan-vidya.mahadev@capgemini.com>
+Date:   Sun Sep 19 00:42:13 2021 +0530
+
+    Undo_commit "commit everything to revert"
+
+    This reverts commit 9d24ef2a482dc4f3bb50591a79334876c768e79d.
+
+commit 9d24ef2a482dc4f3bb50591a79334876c768e79d
+Author: Chavan <chavan-vidya.mahadev@capgemini.com>
+Date:   Sun Sep 19 00:39:32 2021 +0530
+
+    commit everything to revert
+
+commit 59ac0fc2eb4415a32f2a53a45f33dbdf57d645c3
+Author: Chavan <chavan-vidya.mahadev@capgemini.com>
+Date:   Sun Sep 19 00:22:06 2021 +0530
+
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git revert ^C
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git revert cfa511b413bbd44ea68751339f23b29c8b99c2f0
+[master 38cc95d] Second_Revert "done configuring command"
+ Committer: Chavan <chavan-vidya.mahadev@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
+$ git log --all --decorate --oneline --graph
+* 38cc95d (HEAD -> master) Second_Revert "done configuring command"
+* cfa511b done configuring command
+* 75fbfde Undo_commit "commit everything to revert"
+* 9d24ef2 commit everything to revert
+* 59ac0fc Second commit
+* 25c34f8 First commit for index
+
+cmahadev@LIN20003871 MINGW64 ~/project_dir/project_dir (master)
